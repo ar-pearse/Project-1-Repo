@@ -27,7 +27,7 @@ public class RequestForwarder {
 	
 	public String routes(HttpServletRequest req) {
 		switch(req.getRequestURI()) {
-		case "/AmatuerPhotoshop/login.page":
+		case "/AmatuerPhotoshop-0.0.1-SNAPSHOT/login.page":
 			logger.info("Routed to employee.html");
 			return uc.verifyUser(req);
 		case "/AmatuerPhotoshop/employee.page":
