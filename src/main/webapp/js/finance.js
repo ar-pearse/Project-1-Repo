@@ -94,7 +94,7 @@ async function rejectReimbursement(id){
         cid: id
     }
 
-    const fetched = await fetch('http://localhost:8080/AmatuerPhotoshop/reject.json', {
+    const fetched = await fetch('http://3.20.226.235:8081/AmatuerPhotoshop-0.0.1-SNAPSHOT/reject.json', {
         method: 'post',
         body: JSON.stringify(cardId)
     });
@@ -102,7 +102,7 @@ async function rejectReimbursement(id){
     destroyCards();
 
     asyncFetch(
-        "http://localhost:8080/AmatuerPhotoshop/allReimbursements.json",
+        "http://3.20.226.235:8081/AmatuerPhotoshop-0.0.1-SNAPSHOT/allReimbursements.json",
         renderCards
     )
 }
@@ -112,7 +112,7 @@ async function acceptReimbursement(id){
         cid: id
     }
     
-    const fetched = await fetch('http://localhost:8080/AmatuerPhotoshop/accept.json', {
+    const fetched = await fetch('http://3.20.226.235:8081/AmatuerPhotoshop-0.0.1-SNAPSHOT/accept.json', {
         method: 'post',
         body: JSON.stringify(cardId)
     });
@@ -120,14 +120,14 @@ async function acceptReimbursement(id){
     destroyCards();
     
     asyncFetch(
-        "http://localhost:8080/AmatuerPhotoshop/allUserReimbursements.json",
+        "http://3.20.226.235:8081/AmatuerPhotoshop-0.0.1-SNAPSHOT/allUserReimbursements.json",
         renderCards
     );
 }
 
 //When page loads, grab all reimbursements
 asyncFetch(
-    "http://localhost:8080/AmatuerPhotoshop/allReimbursements.json",
+    "http://3.20.226.235:8081/AmatuerPhotoshop-0.0.1-SNAPSHOT/allReimbursements.json",
     renderCards
 );
 
@@ -146,7 +146,7 @@ async function sortByUser(id){
         uid: id
     }
 
-    const fetched = await fetch('http://localhost:8080/AmatuerPhotoshop/sorted.json', {
+    const fetched = await fetch('http://3.20.226.235:8081/AmatuerPhotoshop-0.0.1-SNAPSHOT/sorted.json', {
         method: 'post',
         body: JSON.stringify(userId)
     });
@@ -159,6 +159,6 @@ async function sortByUser(id){
 }
 
 asyncFetch(
-    "http://localhost:8080/AmatuerPhotoshop/user.json",
+    "http://3.20.226.235:8081/AmatuerPhotoshop-0.0.1-SNAPSHOT/user.json",
     addUsers
 );

@@ -87,7 +87,7 @@ async function asyncFetch(url, expression){
 }
 
 asyncFetch(
-    "http://localhost:8080/AmatuerPhotoshop/allUserReimbursements.json",
+    "http://3.20.226.235:8081/AmatuerPhotoshop-0.0.1-SNAPSHOT/allUserReimbursements.json",
     renderCards
 )
 
@@ -96,7 +96,7 @@ async function cancelReimbursement(id){
         cid: id
     }
 
-    const fetched = await fetch('http://localhost:8080/AmatuerPhotoshop/cancel.json', {
+    const fetched = await fetch('http://3.20.226.235:8081/AmatuerPhotoshop-0.0.1-SNAPSHOT/cancel.json', {
         method: 'post',
         body: JSON.stringify(cardId)
     });
@@ -104,7 +104,7 @@ async function cancelReimbursement(id){
     destroyCards();
 
     asyncFetch(
-        "http://localhost:8080/AmatuerPhotoshop/allUserReimbursements.json",
+        "http://3.20.226.235:8081/AmatuerPhotoshop-0.0.1-SNAPSHOT/allUserReimbursements.json",
         renderCards
     );
 }

@@ -7,7 +7,7 @@ async function addReimbursement(){
 
     console.log(JSON.stringify(reimb));
 
-    await fetch('http://localhost:8080/AmatuerPhotoshop/reimb.json', {
+    await fetch('http://3.20.226.235:8081/AmatuerPhotoshop-0.0.1-SNAPSHOT/reimb.json', {
         method: 'post',
         body: JSON.stringify(reimb)
     });
