@@ -30,16 +30,16 @@ public class RequestForwarder {
 		case "/AmatuerPhotoshop-0.0.1-SNAPSHOT/login.page":
 			logger.info("Routed to employee.html");
 			return uc.verifyUser(req);
-		case "/AmatuerPhotoshop/employee.page":
+		case "/AmatuerPhotoshop-0.0.1-SNAPSHOT/employee.page":
 			logger.info("Routed to employee.html");
 			return "html/employee.html";
-		case "/AmatuerPhotoshop/finance.page":
+		case "/AmatuerPhotoshop-0.0.1-SNAPSHOT/finance.page":
 			logger.info("Routed to finance manager.html");
 			return "html/finance manager.html";
-		case "/AmatuerPhotoshop/request.page":
+		case "/AmatuerPhotoshop-0.0.1-SNAPSHOT/request.page":
 			logger.info("Routed to new request.html");
 			return "html/new request.html";
-		case "/AmatuerPhotoshop/create.page":
+		case "/AmatuerPhotoshop-0.0.1-SNAPSHOT/create.page":
 			logger.info("Routed to employee.html");
 			return "html/employee.html";
 		default:
@@ -50,35 +50,35 @@ public class RequestForwarder {
 	
 	public void data(HttpServletRequest req, HttpServletResponse res) {
 		switch(req.getRequestURI()) {
-		case "/AmatuerPhotoshop/allUserReimbursements.json":
+		case "/AmatuerPhotoshop-0.0.1-SNAPSHOT/allUserReimbursements.json":
 			rc.sendUserReimbursementRequests(req, res);
 			logger.info("Routed to allUserReimbursements.json");
 			break;
-		case "/AmatuerPhotoshop/reimb.json":
+		case "/AmatuerPhotoshop-0.0.1-SNAPSHOT/reimb.json":
 			rc.createNewReimbursement(req);
 			logger.info("Routed to reimb.json");
 			break;
-		case "/AmatuerPhotoshop/cancel.json":
+		case "/AmatuerPhotoshop-0.0.1-SNAPSHOT/cancel.json":
 			rc.cancelReimbursement(req);
 			logger.info("Routed to cancel.json");
 			break;
-		case "/AmatuerPhotoshop/allReimbursements.json":
+		case "/AmatuerPhotoshop-0.0.1-SNAPSHOT/allReimbursements.json":
 			rc.sendAllPendingReimbursements(res);
 			logger.info("Routed to allReimbursements.json");
 			break;
-		case "/AmatuerPhotoshop/reject.json":
+		case "/AmatuerPhotoshop-0.0.1-SNAPSHOT/reject.json":
 			rc.rejectReimbursement(req, res);
 			logger.info("Routed to reject.json");
 			break;
-		case "/AmatuerPhotoshop/accept.json":
+		case "/AmatuerPhotoshop-0.0.1-SNAPSHOT/accept.json":
 			rc.acceptReimbursement(req, res);
 			logger.info("Routed to accept.json");
 			break;
-		case "/AmatuerPhotoshop/user.json":
+		case "/AmatuerPhotoshop-0.0.1-SNAPSHOT/user.json":
 			uc.getEmployeeList(res);
 			logger.info("Routed to user.json");
 			break;
-		case "/AmatuerPhotoshop/sorted.json":
+		case "/AmatuerPhotoshop-0.0.1-SNAPSHOT/sorted.json":
 			logger.info("Routed to sorted.json");
 			rc.sortByEmployee(req, res);
 		}
