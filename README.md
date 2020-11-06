@@ -8,11 +8,10 @@ Git, CSS, HTML, JavaScript, Java, Servlet, Tomcat, RDS, EC2
 <br>
 
 # Getting Started
-git clone https://github.com/ar-pearse/Project-1-Repo/.git
-Install Tomcat and Maven onto EC2
-Install Jenkins onto EC2, create a job using the repository and set the build instructions as: mvn clean package
-Run ./start.sh in the bin of Tomcat on the EC2
-<br>
+git clone https://github.com/ar-pearse/Project-1-Repo/.git<br>
+Install Tomcat and Maven onto EC2<br>
+Install Jenkins onto EC2, create a job using the repository and set the build instructions as: mvn clean package<br>
+Run ./start.sh in the bin of Tomcat on the EC2<br>
 
 # Usage
 Program is pretty self explanatory, login credentials are as follows:<br>
